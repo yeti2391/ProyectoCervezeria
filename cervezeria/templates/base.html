@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    {% block cabecera %}{% endblock %}
+    <br>
+    <nav>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Cervezas</a></li>
+      <li><a href="#">Breve Historia</a></li>
+      <li><a href="#">Acerca de nosotros</a></li>
+      <li><a href="#">Registro</a></li>
+      <li><a href="#">Ingresar</a></li>
+      <li><a href="#">Salir</a></li>
+      <li><a href="#">Contacto</a></li>
+    </nav>
+    {% block contenido %}{% endblock %}
+    {% block pie%}
+      <footer>Proyecto final Cervezeria &copy; 2020</footer>
+    {% endblock %}
+  </body>
+</html>
