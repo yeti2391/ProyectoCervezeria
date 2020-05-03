@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 
+{% load static %}
+<!-- ERROR NO ME ESTA CARGANDO EL CSS index.css -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
 {% block titulo %}Cervezeria El Choborra {% endblock %}
 {% block cabecera %}<h1>Inicio</h1>{% endblock %}
 {% block contenido %}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sbU71sKxw6Q?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="videop">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/sbU71sKxw6Q?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
   <h2>Bienvenido</h2>
   <div class="imagenlocal">
     <img src="" alt="">
