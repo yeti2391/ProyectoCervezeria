@@ -1,0 +1,11 @@
+@charset 'utf-8';
+
+body, header, footer{
+  font-family: monospace;
+}
+
+header{}
+
+nav li{float: left; display: inline-inline-block;;}
+
+footer{}
