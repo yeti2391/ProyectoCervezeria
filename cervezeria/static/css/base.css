@@ -1,22 +1,25 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 body, header, footer{
-  font-family: monospace;
+  font-family: monospace, helvetica;
 }
+
+body{ background-color: black;}
 
 h1{
   background-color: red;
   color: black;
 }
 /* STYLE PARA EL NAV */
-nav li{
+.indicenav li{
   display: inline-flex;
   justify-content: center;
 }
 
-nav li a{
+.indicenav li a{
   padding: 5px;
   text-decoration: none;
+  font-size: 18px;
   border-color: black;
   border-style: solid;
   border-width: thin;
@@ -24,7 +27,7 @@ nav li a{
   background-color: grey;
 }
 
-nav li a:hover{
+.indicenav li a:hover{
   background-color: black;
   color: grey;
 }

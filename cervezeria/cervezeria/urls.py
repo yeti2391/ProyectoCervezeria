@@ -21,5 +21,7 @@ from cervezeria.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('hola/', hola),
-    path('', index),
+    path('', index, name='inicio'),
+    path('cervezas/', cervezas, name='cervezas'),
+    path('brevehistoria/', brevehistoria, name='brevehistoria')
 ]

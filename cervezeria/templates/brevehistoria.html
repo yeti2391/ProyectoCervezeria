@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" href="/static/css/brevehistoria.css">
+{% load static %}
+<!-- ERROR NO ME ESTA CARGANDO EL CSS index.css -->
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"> -->
+{% block titulo %}Cervezeria El Choborra {% endblock %}
+{% block cabecera %}<h1>Un poco de historia</h1>{% endblock %}
+{% block contenido %}
+<style media="screen">
+  .indice{
+    color:blue;
+  }
+  #indicehistoria li{
+    display: list-item;
+    text-decoration: none;
+  }
+
+</style>
+  <!-- ACA HACER UNA HISTORIA DE LA CERVEZA COMO TAL (Empezar con un indice?) -->
+  <div class="indice">
+    <nav id="indicehistoria" >
+      <h2>Indice de contendio:</h2>
+      <ul>
+        <li><a href="#sumeria">Sumeria</a></li>
+        <li><a href="#babilonia">Babilonia</a></li>
+        <li><a href="#egipto">Egipto</a></li>
+        <li><a href="#iberia">Iberia</a></li>
+        <li><a href="#edadmedia">Edad Media</a></li>
+        <li><a href="#XV">S.XV hasta XVIII</a></li>
+        <li><a href="#industrial">S.XIX y actualidad</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <div id="sumeria"> <!-- SUMERIA -->
+    <img src="/static/img/cuneiforme.jpg" alt="escritura cuneiforme">
+    <p> No se sabe con exactitud el origen de la cerveza. Probablemante su existencia sea tan antigua como el origen del hombre.
+Los primeros datos que se conocen datan de la época de los Sumerios, en la baja Mesopotamia,  allá por el  año 4000 antes de Cristo. Hoy correspondería con lo que es una parte de Irak.
+Los sumerios  elaboraban  una especie de  cerveza que llamaban “ bebida fuerte “ con extracto de cebada.
+    </p>
+    <p>Sabemos de su existencia porque se hallaron unas pequeñas tablas de arcilla donde se mencionaba tal licor.
+    Probablemente fueron los sumerios quienes por casualidad dejaron germinar algunos granos de cebada que al combinarlos con agua y levaduras salvajes dieron como resultado una incipiente cerveza.
+    </p>
+  </div>
+  <div id="babilonia"> <!-- BABILONIA -->
+    <img src="/static/img/hamurabi.jpg" alt="codigo Hamurabi">
+    <p>La antigua Mesópotamia se transformó con el tiempo en el Imperio Babilónico, y los conocimientos sobre la elaboración de la cerveza se fueron ampliando. De hecho, los babilonios elaboraban diferentes tipos de cerveza.
+    </p>
+    <p>La primera receta conocida  se encuentra en el Código de Hamurabi.
+    En el Museo Británico se encuentan  dos piedras grabadas con más de 5.000 años de antigüedad donde se puede ver una  ofrenda de cerveza a la diosa Nin-Harra. Se trata del Monumento Azul.
+    </p>
+  </div>
+  <div id="egipto"> <!-- EGIPTO -->
+    <img src="/static/img/egipto.jpg" alt="jeroglifos egipcios">
+    <p>Al mismo tiempo, los egipcios también bebían un licor a base de cebada que llamaban “ zytum”. Esta bebida era aromatizada en ocasiones con miel,  dátiles , canela, etc..
+    </p>
+    <p>Se sabe que los trabajadores de las pirámides cobraban  parte de sus salarios en cerveza. Recibían entre cuatro y seis litros de cerveza al día.
+</p>
+  </div>
+  <div id="iberia"> <!-- IBERIA -->
+    <p>
+      Los egipcios exportaron la cerveza a los griegos, quienes a su vez la exportaron a los romanos y éstos a los galos y germánicos. Sin embargo , los romanos no estaban muy interesados en este licor. Lo consideraban una bebida inferior, ya que ellos daban muchísima más importancia al vino.
+    </p>
+    <p>
+      Fueron los galos y germánicos quienes empezaron a elaborar la cerveza con malta de cebada  y avena. Para dar aroma usaban el comino.
+      En honor al Dios  Ceres,  Dios de la agricultura, los galos dan al licor que elaboraban el nombre de “ cerevisa”. De ahí el nombre de origen latino de “ cerveza” que nosotros conocemos.
+    </p>
+  </div>
+  <div id="edadmedia"> <!--EDAD MEDIA -->
+    <img src="/static/img/hamurabi.jpg" alt="pintura edad media">
+    <p>
+      Durante la Edad Media fueron las Abadías de Centro Europa las guardianas de la cerveza, mejorando la caliadad de las recetas.
+    </p>
+    <p>Los monjes guardaron celosamente sus recetas y lograron mejorar el aspecto, el aroma y el sabor de las cervezas que elaboraban.
+    </p>
+  </div>
+  <div id="XV"> <!-- S. XV y mas -->
+      <p>Hacia el Siglo XV se empieza a utilizar el lúpulo como aromatizante. Pronto se dieron cuenta que la cerveza a la que se le añadía lúpulo se conservaba durante mucho más tiempo. Sin querer habían encontrado un conservante natural debido a las propiedades antisepticas que posee.
+</p>
+      <p>La cerveza se popularizó  tanto en algunos países que pronto se  crearon  leyes para su regulación.
+      El 23 de Abril de 1516 el Emperador Guillermo IV de Babiera decreta la  Ley de Pureza donde decreta que  la cerveza solamente se debía elaborar a partir de tres ingredientes: agua, malta de cebada  y lúpulo.   Evidentemente aún no se conocía el ingrediente fundamental, el cuál  había estado desde el origen de la cerveza y que es el que realmente elabora la cerveza. Nos refrimos a la levadura.
+</p>
+      <p>Es en el siglo XVIII cuando lo cerveza consigue su gran expansión. Cerveceros bábaros almacenaban sus cervezas en sótanos, y cuevas a los que llaman Lagern ( almacén)  donde dejaban  que su cerveza madurara lentamente con el frío a temperaturas constantes, normalmente entre 8 y 10 grados. Utilizaban levaduras de baja fermentación.
+</p>
+  </div>
+  <div id="industrial"> <!-- REVOLUCION INDUSTRIAL -->
+      <p>La cerveza se comenzaba a industrializar a finales del siglo xix.
+      Los principales centros  productores en Europa eran Burton-onTrent en Inglaterra, München en Alemania y  Pilsen  en Bohemia.  Cada uno de ellos tenía un estilo propio de elaboración de cerveza.
+</p>
+    <img src="/static/img/cervezasvarias.jpg" alt="marcas industriales">
+      <p>Es en el Siglo XX  cuando la cerveza  nace con una vocación global de ser industrializada. Aparecen las grandes compañías cerveceras que fagocitan a las pequeñas industrias artesanales.
+</p>
+      <p>En el Siglo XXI parece que se está invirtiendo un poco esa tendencia, y asistimos a un florecimiento de la pequeña industria cervecera  con carácter artesano que da  a la cerveza un toque de calidad y exclusividad que había perdido.
+</p>
+  </div>
+
+  <p>Fuente: <a href="https://grannaria.com/breve-historia-del-origen-de-la-cerveza/">grannaria.com</a></p>
+{% endblock %}

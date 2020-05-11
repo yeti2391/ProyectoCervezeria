@@ -6,3 +6,9 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, 'index.html')
+
+def cervezas(request):
+    return render(request, 'cervezas.html')
+
+def brevehistoria(request):
+    return render(request, 'brevehistoria.html')

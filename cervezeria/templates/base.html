@@ -8,16 +8,15 @@
   </head>
   <body>
     {% block cabecera %}{% endblock %}
-    <br>
     <nav class="indicenav">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Cervezas</a></li>
-      <li><a href="#">Breve Historia</a></li>
+      <li><a href="{% url 'inicio' %}">Inicio</a></li>
+      <li><a href="{% url 'cervezas' %}">Cervezas</a></li>
+      <li><a href="{% url 'brevehistoria' %}">Un poco de historia</a></li>
       <li><a href="#">Acerca de nosotros</a></li>
       <li><a href="#">Registro</a></li>
       <li><a href="#">Ingresar</a></li>
       <li><a href="#">Salir</a></li>
-      <li><a href="#">Contacto</a></li>
+      <li><a href="#">Contacto</a></li> <!-- en vez de dejarlo en la barra dejar parte abajo de las paginas?-->
     </nav>
     {% block contenido %}{% endblock %}
     {% block pie%}

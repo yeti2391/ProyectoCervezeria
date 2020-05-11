@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.indice{
+  color:blue;
+}
+#indicehistoria li{
+  display: list-item;
+  text-decoration: none;
+}
