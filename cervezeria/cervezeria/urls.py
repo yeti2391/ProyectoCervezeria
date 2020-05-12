@@ -23,5 +23,11 @@ urlpatterns = [
     #path('hola/', hola),
     path('', index, name='inicio'),
     path('cervezas/', cervezas, name='cervezas'),
-    path('brevehistoria/', brevehistoria, name='brevehistoria')
+    path('brevehistoria/', brevehistoria, name='brevehistoria'),
+    path('acerca/', acerca, name='acerca'),
+    path('buscar/', buscar, name='buscar'),
+    path('contacto/', contacto, name='contacto'),
 ]
+
+
+#urlpatterns += /static/ (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

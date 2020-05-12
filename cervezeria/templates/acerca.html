@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<!-- ERROR NO ME ESTA CARGANDO EL CSS index.css -->
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"> -->
+{% block titulo %}Cervezeria El Choborra {% endblock %}
+{% block cabecera %}<h1>Acerca de nosotros</h1>{% endblock %}
+{% block contenido %}
+  <img src="/static/img/local.jpg" alt="imagen del local" width="300" height="200">
+  <p>Un día tres amigos de toda la vida, decidieron emprender un loco viaje,
+
+el resultado... El Choborra.</p>
+
+
+<p>Lo que comenzó como un sueño, fue creciendo día a día fruto de un gran esfuerzo,
+
+convirtiendo a El Choborra en una de las cervecerías de referencia en Montevideo.</p>
+
+<p>Actualmente con 28 canillas, garantizando una gran variedad de estilos y oportunidades
+
+para todas las marcas amigas que se incorporan día a día.</p>
+
+{% endblock %}

@@ -125,3 +125,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')] #BASE_DIR es el nombre de la carpeta del proyecto
+
+MEDIA_ROOT = os.path.join(BASE_DIR)
+MEDIA_URL = '/media/'
+
+#PARA EMAIL CONTACTO:
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'elchoborra2391@gmail.com'
+EMAIL_HOST_PASSWORD = 'choborra1234'
+EMAIL_PORT = 587

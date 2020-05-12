@@ -3,8 +3,9 @@
 body, header, footer{
   font-family: monospace, helvetica;
 }
+p{color: white;}
 
-body{ background-color: black;}
+body{ background-color: orange;}
 
 h1{
   background-color: red;

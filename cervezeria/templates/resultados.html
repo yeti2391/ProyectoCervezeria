@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<!-- ERROR NO ME ESTA CARGANDO EL CSS index.css -->
+{% block titulo %}Resultados{% endblock %}
+{% block cabecera %}<h1>Resultados</h1>{% endblock %}
+{% block contenido %}
+  <p>Resultados: </p>
+  {% if res %}
+    <p>Libro {{res|pluralize}}
+    encontrado{{res|pluralize}}:
+    {{res|length}}
+    </p>
+    <ul>
+      <li>
+        <p>Titulo: {{a.titulo}}</p>
+        <p>Editorial: {{a.editorial}}</p>
+        <p>Autor: {% for i in a.autores.all %}
+                      {{i.nombre}}
+                      {{i.apellidos}}
+                  {% endfor %}
+        </p>
+      </li>
+    </ul>
+  {% else %}
+      <p>Ningun resultado que coincida</p>
+  {% endif %}
+{% endblock %}
