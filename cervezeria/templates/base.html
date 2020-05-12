@@ -13,11 +13,16 @@
       <li><a href="{% url 'cervezas' %}">Cervezas</a></li>
       <li><a href="{% url 'brevehistoria' %}">Un poco de historia</a></li>
       <li><a href="{% url 'acerca' %}">Acerca de nosotros</a></li>
-      <li><a href="#">Registro</a></li>
-      <li><a href="#">Ingresar</a></li>
+      <li><a href="{% url 'registro' %}">Registro</a></li>
+      <li><a href="{% url 'ingresar' %}">Ingresar</a></li>
       <li><a href="#">Salir</a></li>
       <li><a href="{% url 'contacto' %}">Contacto</a></li> <!-- en vez de dejarlo en la barra dejar parte abajo de las paginas?-->
     </nav>
+    <form id="Busqueda" action="/buscar/" method="get">
+        <input type="text" name="busca">
+        <input type="submit" value="Buscar">
+    </form>
+
     {% block contenido %}{% endblock %}
     {% block pie%}
       <footer>Proyecto final Cervezeria &copy; 2020</footer>

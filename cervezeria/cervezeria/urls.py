@@ -27,6 +27,9 @@ urlpatterns = [
     path('acerca/', acerca, name='acerca'),
     path('buscar/', buscar, name='buscar'),
     path('contacto/', contacto, name='contacto'),
+    path('registro/', usuario_nuevo, name='registro'),
+    path('privado/', privado, name='privado'),
+    path('ingresar/', ingresar, name='ingresar'),
 ]
 
 
