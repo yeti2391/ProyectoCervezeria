@@ -84,3 +84,18 @@ def ingresar(request):
     else:
         formulario=AuthenticationForm()
         return render(request, 'ingresar.html', {'formulario':formulario})
+
+def salir(request):
+    if not request.user.is_anonymous:
+        logut(request)
+        return HttpResponseRedirect('/ingresar')
+    else:
+        return render(request, 'no_logueado.html')
+
+def error_404(request, exception):
+    response = render(request, '404.html', {})
+    return response
+
+def error_500(request):
+    response = render(request, '500.html', {})
+    return response

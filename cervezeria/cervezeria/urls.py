@@ -16,7 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from cervezeria.views import *
+from django.conf.urls import handler404, handler500
 #from cervezeria.views import hola
+
+
+handler404=error_404
+handler500=error_500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +35,7 @@ urlpatterns = [
     path('registro/', usuario_nuevo, name='registro'),
     path('privado/', privado, name='privado'),
     path('ingresar/', ingresar, name='ingresar'),
+    path('salir/', salir, name='salir'),
 ]
 
 

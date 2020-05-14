@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<!-- ERROR NO ME ESTA CARGANDO EL CSS index.css -->
+{% block titulo %}Error 404{% endblock %}
+{% block cabecera %}<h1>Error 404</h1>{% endblock %}
+{% block contenido %}
+<img src="/static/img/2error404.jpg" alt="error 404">
+<p>Pagina no encontrada</p>
+{% endblock %}
