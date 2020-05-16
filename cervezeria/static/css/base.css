@@ -18,9 +18,9 @@ h1{
 }
 
 .indicenav li a{
-  padding: 5px;
+  padding: 10px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 12px;
   border-color: black;
   border-style: solid;
   border-width: thin;
@@ -35,6 +35,10 @@ h1{
 .indicenav{
   display: flex;
   justify-content: center;
+}
+/* BUSQUEDA */
+#Busqueda{
+  margin: 10px 5px 20px 5px;
 }
 
 /* FOOTER */

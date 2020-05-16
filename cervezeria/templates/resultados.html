@@ -5,6 +5,11 @@
 {% block titulo %}Resultados{% endblock %}
 {% block cabecera %}<h1>Resultados</h1>{% endblock %}
 {% block contenido %}
+<style media="screen">
+  h1{
+    color:white;
+  }
+</style>
   <p>Resultados: </p>
   {% if res %}
     <p>Libro {{res|pluralize}}

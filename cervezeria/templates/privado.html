@@ -2,6 +2,11 @@
 {% block titulo %}Privado{% endblock %}
 {% block cabecera %}<h1>Privado</h1>{% endblock %}
 {% block contenido %}
+<style media="screen">
+  h1{
+    color:white;
+  }
+</style>
   <p>Bienvenido {{usuario.username|upper}}</p>
   <p>La ultima vez que te logueaste fue: {{usuario.last_login}}</p>
 {% endblock %}
