@@ -23,7 +23,7 @@ class NombreCerveza(models.Model):
         verbose_name_plural = "Nombres"
 
     def __str__(self):
-        return "%s %s" & (self.nombre, self.color, self.descripcion)
+        return "%s %s %s" % (self.nombre, self.color, self.descripcion)
 
 class MarcaCerveza(models.Model):
     marca=models.CharField(max_length=50)
