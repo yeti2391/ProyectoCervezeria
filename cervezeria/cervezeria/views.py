@@ -14,7 +14,11 @@ def index(request):
     return render(request, 'index.html')
 
 def cervezas(request):
-    return render(request, 'cervezas.html')
+    cervezas=NombreCerveza.objects.all()
+    contexto = {
+    'cervezas':cervezas
+    }
+    return render(request, 'cervezas.html', contexto)
 
 def brevehistoria(request):
     return render(request, 'brevehistoria.html')

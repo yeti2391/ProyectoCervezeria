@@ -11,6 +11,27 @@
     color:white;
   }
 </style>
-  <!-- ACA HACER UN NAV QUE DE INFO DE CERVEZAS Y SUS PRECIOS -->
+<p>A continuacion se detalla una lista de las cervezas que ofrecemos junto a una breve descrpicion de las mismas</p>
+  <!-- ACA HACER UNA TABLA QUE DE INFO DE CERVEZAS QUE SE ENCUENTREN EN LA BASE DE DATOS -->
+  <table>
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Nombre</th>
+        <th>Color</th>
+        <th>Descripcion</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for cervezas in cervezas %}
+        <tr>
+          <td>{{cervezas.tipo}}</td>
+          <td>{{cervezas.nombre}}</td>
+          <td>{{cervezas.color}}</td>
+          <td>{{cervezas.descripcion}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 
 {% endblock %}

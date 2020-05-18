@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 
 class TipoCerveza(models.Model):
+    id = models.AutoField(primary_key=True)
     tipo=models.CharField(max_length=30)
 
     class Meta:
@@ -14,6 +15,7 @@ class TipoCerveza(models.Model):
 
 class NombreCerveza(models.Model):
     tipo=models.ForeignKey(TipoCerveza, null=True, on_delete=models.CASCADE)
+    #marca=models.ForeignKey(MarcaCerveza, null=True, on_delete=models.CASCADE)
     nombre=models.CharField(max_length=30)
     color=models.CharField(max_length=30)
     descripcion=models.CharField(max_length=300)
@@ -23,9 +25,10 @@ class NombreCerveza(models.Model):
         verbose_name_plural = "Nombres"
 
     def __str__(self):
-        return "%s %s %s" % (self.nombre, self.color, self.descripcion)
+        return "%s %s %s %s" % (self.tipo, self.nombre, self.color, self.descripcion)
 
 class MarcaCerveza(models.Model):
+    id = models.AutoField(primary_key=True)
     marca=models.CharField(max_length=50)
     pais=models.CharField(max_length=50)
     sitioweb=models.URLField(blank=True, null=True)
