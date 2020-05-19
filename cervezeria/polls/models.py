@@ -4,7 +4,7 @@ from django.db import models
 
 class TipoCerveza(models.Model):
     id = models.AutoField(primary_key=True)
-    tipo=models.CharField(max_length=30, blank=False, null= False )
+    tipo=models.CharField(max_length=30, blank=False, null= True )
 
     class Meta:
         ordering=["tipo"]
@@ -16,7 +16,7 @@ class TipoCerveza(models.Model):
 
 class MarcaCerveza(models.Model):
     id = models.AutoField(primary_key=True)
-    marca=models.CharField(max_length=50, blank=True, null= True)
+    marca=models.CharField(max_length=50, null= True)
     pais=models.CharField(max_length=50)
     sitioweb=models.URLField(blank=True, null=True)
 
@@ -30,7 +30,7 @@ class MarcaCerveza(models.Model):
 
 class NombreCerveza(models.Model):
     tipo=models.OneToOneField(TipoCerveza, null=True, on_delete=models.CASCADE)
-    #marca=models.OneToOneField(MarcaCerveza, on_delete=models.CASCADE)
+    marca=models.OneToOneField(MarcaCerveza, null=True, on_delete=models.CASCADE)
     nombre=models.CharField(max_length=30, blank=False, null= False)
     color=models.CharField(max_length=30, blank=False, null= False)
     descripcion=models.CharField(max_length=300)
@@ -41,4 +41,4 @@ class NombreCerveza(models.Model):
         verbose_name_plural = "cervezas"
 
     def __str__(self):
-        return "%s %s %s %s" % (self.tipo, self.nombre, self.color, self.descripcion)
+        return "%s %s %s %s" % (self.tipo, self.marca, self.nombre, self.color, self.descripcion)

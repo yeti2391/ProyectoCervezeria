@@ -17,6 +17,7 @@
     <thead>
       <tr>
         <th>Tipo</th>
+        <th>Marca</th>
         <th>Nombre</th>
         <th>Color</th>
         <th>Descripcion</th>
@@ -26,6 +27,7 @@
       {% for cervezas in cervezas %}
         <tr>
           <td>{{cervezas.tipo}}</td>
+          <td>{{cervezas.marca}}</td>
           <td>{{cervezas.nombre}}</td>
           <td>{{cervezas.color}}</td>
           <td>{{cervezas.descripcion}}</td>
