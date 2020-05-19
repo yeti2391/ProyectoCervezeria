@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from polls.models import TipoCerveza, NombreCerveza, MarcaCerveza
 from django.core.mail import EmailMessage
@@ -6,7 +6,7 @@ from cervezeria.forms import ContactoForm
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login,logout
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, HttpResponseRedirect
+
 #def hola(request):
 #    return HttpResponse("hola mundo prueba")
 
@@ -63,14 +63,9 @@ def usuario_nuevo(request):
         formulario=UserCreationForm()
         return render(request, 'usuario_nuevo.html', {'formulario':formulario})
 
-@login_required(login_url='/ingresar')
-def privado(request):
-    usuario=request.user
-    return render(request, 'privado.html',{'usuario':usuario})
-
 def ingresar(request):
     if not request.user.is_anonymous:
-        return HttpResponseRedirect('privado')
+        return HttpResponseRedirect('/privado')
     elif request.method=='POST':
         formulario = AuthenticationForm(request.POST)
         if formulario.is_valid:
@@ -89,9 +84,14 @@ def ingresar(request):
         formulario=AuthenticationForm()
         return render(request, 'ingresar.html', {'formulario':formulario})
 
+@login_required(login_url='/ingresar')
+def privado(request):
+    usuario=request.user
+    return render(request, 'privado.html', {'usuario':usuario})
+
 def salir(request):
     if not request.user.is_anonymous:
-        logut(request)
+        logout(request)
         return HttpResponseRedirect('/ingresar')
     else:
         return render(request, 'no_logueado.html')
