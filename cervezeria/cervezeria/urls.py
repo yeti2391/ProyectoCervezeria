@@ -39,7 +39,7 @@ urlpatterns = [
     path('privado/', privado),
     path('ingresar/', ingresar, name='ingresar'),
     path('salir/', salir, name='salir'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

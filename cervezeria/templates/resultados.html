@@ -9,25 +9,39 @@
   h1{
     color:white;
   }
+  .cuadroresultados{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color: silver;
+  }
+  .cuadroresultados p{color:black;}
+  li{
+    text-decoration: none;
+  }
+   li p{
+    color: black;
+  }
 </style>
-  <p>Resultados: </p>
+  <p><u>Su busqueda tiene los siguientes resultados:</u> </p>
+<div class="cuadroresultados">
   {% if res %}
-    <p>Libro {{res|pluralize}}
-    encontrado{{res|pluralize}}:
-    {{res|length}}
-    </p>
-    <ul>
+    <p>Cerveza {{res|pluralize}} encontrada{{res|pluralize}}: {{res|length}}</p>
+    <ul id="resultado">
+      {% for a in res %}
       <li>
-        <p>Titulo: {{a.titulo}}</p>
-        <p>Editorial: {{a.editorial}}</p>
-        <p>Autor: {% for i in a.autores.all %}
+        <p>Tipo: {{a.tipo}}</p>
+        <p>Nombre: {{a.nombre}}</p>
+        <p>Marca: {{a.marca}}      <!--  {% for i in a.marca.all %}
                       {{i.nombre}}
-                      {{i.apellidos}}
-                  {% endfor %}
-        </p>
+                      {{i.tipo}}
+                  {% endfor %}-->
+        <p>Color: {{a.color}}</p>
+        <p>Descripcion: {{a.descripcion}}</p>
       </li>
+      {% endfor %}
     </ul>
   {% else %}
       <p>Ningun resultado que coincida</p>
   {% endif %}
+</div>
+
 {% endblock %}

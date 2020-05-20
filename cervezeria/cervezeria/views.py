@@ -29,8 +29,8 @@ def acerca(request):
 def buscar(request):
     if "busca" in request.GET and request.GET["busca"]:
         consulta= request.GET["busca"]
-        NombreCerveza = NombreCerveza.objects.filter(titulo__icontains = consulta)
-        return render (request, 'resultados.html', {'res': valor})
+        cerveza = NombreCerveza.objects.filter(nombre__icontains = consulta)
+        return render (request, 'resultados.html', {'res': cerveza})
     else:
         return render (request, 'resultados.html')
 

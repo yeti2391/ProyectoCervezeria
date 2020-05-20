@@ -1,23 +1,30 @@
 {% extends 'base.html' %}
-<link rel="stylesheet" href="/static/css/brevehistoria.css">
+
 {% load static %}
+
 <!-- ERROR NO ME ESTA CARGANDO EL CSS index.css -->
-<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"> -->
+<link rel="stylesheet" href='/css/brevehistoria.css'>
 {% block titulo %}Cervezeria El Choborra {% endblock %}
-{% block cabecera %}<h1 style="color:white;">Un poco de historia</h1>{% endblock %}
+{% block cabecera %}<h1>Un poco de historia</h1>{% endblock %}
 {% block contenido %}
+
+
 <style media="screen">
   body{color:white;}
   .indice{
     color:blue;
   }
   #indicehistoria li{
-    display: list-item;
+    display: block;
     text-decoration: none;
+    margin: 3px;
+    text-decoration:none;
   }
+  h1{color:white;}
 
 </style>
-  <!-- ACA HACER UNA HISTORIA DE LA CERVEZA COMO TAL (Empezar con un indice?) -->
+
+  <!-- ACA HACER UNA HISTORIA DE LA CERVEZA -->
   <div class="indice">
     <nav id="indicehistoria" >
       <h2>Indice de contendio:</h2>
@@ -96,5 +103,5 @@ Los sumerios  elaboraban  una especie de  cerveza que llamaban “ bebida fuerte
 </p>
   </div>
 
-  <p>Fuente: <a href="https://grannaria.com/breve-historia-del-origen-de-la-cerveza/">grannaria.com</a></p>
+  <p style='color:black'>Fuente: <a href="https://grannaria.com/breve-historia-del-origen-de-la-cerveza/">grannaria.com</a></p>
 {% endblock %}

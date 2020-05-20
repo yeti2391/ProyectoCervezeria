@@ -18,9 +18,9 @@
       <li><a href="{% url 'salir' %}">Salir</a></li>
       <li><a href="{% url 'contacto' %}">Contacto</a></li> <!-- en vez de dejarlo en la barra dejar parte abajo de las paginas?-->
     </nav>
-    <form id="Busqueda" action="/buscar/" method="get">
+    <form id="busqueda" action="/buscar/" method="get">
         <input type="text" name="busca">
-        <input type="submit" value="Buscar">
+        <input type="submit" value="Buscador de Cervzas">
     </form>
 
     {% block contenido %}{% endblock %}

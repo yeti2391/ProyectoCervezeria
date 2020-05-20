@@ -1,8 +1,13 @@
 @charset "UTF-8";
 
+#indicehistoria h2{color:white;}
+
+h1, h2{color:white;}
+
 .indice{
   color:blue;
 }
+
 #indicehistoria li{
   display: list-item;
   text-decoration: none;
