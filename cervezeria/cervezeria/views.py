@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-from polls.models import TipoCerveza, NombreCerveza, MarcaCerveza
+from polls.models import TipoCerveza, NombreCerveza, MarcaCerveza, Origen
 from django.core.mail import EmailMessage
 from cervezeria.forms import ContactoForm
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -15,6 +15,7 @@ def index(request):
 
 def cervezas(request):
     cervezas=NombreCerveza.objects.all()
+    #pais = Origen.objects.all()
     contexto = {
     'cervezas':cervezas
     }
