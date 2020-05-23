@@ -1,20 +1,13 @@
 @import url("base.css");
 @charset "UTF-8";
 
-
-#indicehistoria h2{color:green;}
-
 h1, h2{color:white;}
 
 .indice{
-  color:blue;
+  color:black;
 }
 
 #indicehistoria li{
   display: list-item;
   text-decoration: none;
-}
-
-.prueba1{
-  color: green;
 }

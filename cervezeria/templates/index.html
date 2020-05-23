@@ -2,19 +2,11 @@
 
 {% load static %}
 <!-- ERROR NO ME ESTA CARGANDO EL CSS index.css -->
-<link rel="stylesheet" type="text/css" href="/static/css/index.css">
+{% block linkcss %}<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">{% endblock %}
 {% block titulo %}Cervezeria El Choborra {% endblock %}
 {% block cabecera %}<h1>Inicio</h1>{% endblock %}
 {% block contenido %}
-<style media="screen">
-  h3, h2, h1, p{
-    color:white
-  }
-  iframe{
-    display: block;
-    margin: 5px auto;
-  }
-</style>
+
 <div class="videop">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/sbU71sKxw6Q?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

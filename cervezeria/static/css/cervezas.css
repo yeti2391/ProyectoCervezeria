@@ -1,0 +1,24 @@
+@import url("base.css");
+
+
+.cuadroresultados{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color: silver;
+    margin: 0px auto;
+    width: 1000px;
+  }
+
+th{
+    color:white;
+    background-color: black;
+  }
+th, td{
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    margin: 2px 0px;
+    padding: 5px 11px;
+
+  }
+tr{
+  width: 1500px;
+}

@@ -3,13 +3,22 @@
 body, header, footer{
   font-family: monospace, helvetica;
 }
-p{color: white;}
+p, h2, h3{
+  color: white;
+  margin: 5px;
+  padding:10px;
+}
 
-body{ background-color: orange;}
+body{
+  background-color: orange;
+}
 
 h1{
   background-color: red;
-  color: black;
+  color: white;
+  padding: 5px;
+  border-bottom-left-radius: 10pt;
+  border-top-right-radius: 10pt;
 }
 /* STYLE PARA EL NAV */
 .indicenav li{
@@ -36,6 +45,14 @@ h1{
   display: flex;
   justify-content: center;
 }
+nav li .liinicio{
+  border-top-left-radius: 10pt;
+  border-bottom-left-radius: 10pt;
+}
+.licontacto{
+  border-bottom-right-radius: 10pt;
+  border-top-right-radius: 10pt;
+}
 /* BUSQUEDA */
 #busqueda{
   float: block;
@@ -46,6 +63,7 @@ h1{
 footer{
   background-color: grey;
   color: white;
+  padding: 5px;
   margin-top: 150px;
   text-align: center;
 }

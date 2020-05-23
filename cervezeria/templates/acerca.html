@@ -2,7 +2,7 @@
 
 {% load static %}
 <!-- ERROR NO ME ESTA CARGANDO EL CSS index.css -->
-<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+{% block linkcss %}<link rel="stylesheet" type="text/css" href="{% static 'css/acerca.css' %}">{% endblock %}
 {% block titulo %}Cervezeria El Choborra {% endblock %}
 {% block cabecera %}<h1>Acerca de nosotros</h1>{% endblock %}
 {% block contenido %}

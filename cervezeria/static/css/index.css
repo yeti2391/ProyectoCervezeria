@@ -1,19 +1,11 @@
+@import url("base.css");
 @charset "utf-8";
 
 
-
 /* CENTRAR VIDEO */
-.videop{
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-  float: left;
-  align: center;
+iframe{
+  display: block;
+  margin: 5px auto;
 }
 
-h2{
-  background-color: red;
-  color: white;
-}
-
-p{color: red;}
+p{color:white;}
