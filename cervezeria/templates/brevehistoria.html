@@ -3,7 +3,7 @@
 {% load static %}
 
 <!-- ERROR NO ME ESTA CARGANDO EL CSS index.css -->
-<link rel="stylesheet" href='/css/brevehistoria.css'>
+{% block linkcss %}<link rel="stylesheet" href="{% static 'css/brevehistoria.css' %}">{% endblock %}
 {% block titulo %}Cervezeria El Choborra {% endblock %}
 {% block cabecera %}<h1>Un poco de historia</h1>{% endblock %}
 {% block contenido %}
@@ -43,7 +43,7 @@
 
   <div id="sumeria"> <!-- SUMERIA -->
     <img src="/static/img/cuneiforme.jpg" alt="escritura cuneiforme">
-    <p> No se sabe con exactitud el origen de la cerveza. Probablemante su existencia sea tan antigua como el origen del hombre.
+    <p class="prueba1"> No se sabe con exactitud el origen de la cerveza. Probablemante su existencia sea tan antigua como el origen del hombre.
 Los primeros datos que se conocen datan de la época de los Sumerios, en la baja Mesopotamia,  allá por el  año 4000 antes de Cristo. Hoy correspondería con lo que es una parte de Irak.
 Los sumerios  elaboraban  una especie de  cerveza que llamaban “ bebida fuerte “ con extracto de cebada.
     </p>
